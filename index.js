@@ -7,5 +7,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
+    fetch('https://api.scryfall.com/sets/aer').then(response => response.json()).then(data => console.log(data))
+    
   console.log(`Example app listening at http://localhost:${port}`)
 })
